@@ -1,44 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>P2P Expense Share</title>
-</head>
-<body>
-  <h1>P2P Expense Tracker</h1>
-
-  <div>
-    <button id="createBtn">Create Room</button>
-    <button id="joinBtn">Join Room</button>
-    <button id="logoutBtn">Logout</button>
-  </div>
-
-  <div>
-    <input type="text" id="joinId" placeholder="Enter Host Peer ID" />
-    <input type="text" id="roomPass" placeholder="Room Pass (optional)" />
-  </div>
-
-  <div>
-    <strong>Your ID:</strong> <span id="myId"></span> <br/>
-    <strong>Connected to:</strong> <span id="peerId"></span>
-  </div>
-
-  <div>
-    <strong>Invite Link:</strong> <input id="inviteLink" readonly style="width: 100%;" />
-  </div>
-
-  <h2>Add Expense</h2>
-  <input id="desc" placeholder="Description" />
-  <input id="amount" placeholder="Amount" type="number" />
-  <input id="paidBy" placeholder="Paid By" />
-  <button id="addExpense">Add</button>
-
-  <ul id="expenseList"></ul>
-
-  <pre id="log"></pre>
-
-  <!-- PeerJS CDN -->
-  <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
-  <script src="app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>P2P Expense Groups</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- PeerJS CDN (required for P2P) -->
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
